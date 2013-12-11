@@ -1,0 +1,34 @@
+{
+  "name": "node-csvify",
+  "version": "0.0.3",
+  "description": "CSV/TSV precompiler for Browserify v2",
+  "main": "index.js",
+  "scripts": {
+    "test": "test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilson428/node-csvify"
+  },
+  "keywords": [
+    "tsv",
+    "csv",
+    "browserify"
+  ],
+  "author": {
+    "name" : "Chris Wilson",
+    "email" : "wilson@mechanicalscribe.com",
+    "url" : "http://mechanicalscribe.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "through": ">= 2.2.7",
+    "d3": "?= 3.3.11"
+  },
+  "devDependencies": {
+    "browserify": ">= 2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/wilson428/node-csvify/issues"
+  }
+}
