@@ -1,7 +1,7 @@
 {
   "name": "node-csvify",
-  "version": "0.0.3",
-  "description": "CSV/TSV precompiler for Browserify v2",
+  "version": "0.0.1",
+  "description": "CSV and TSV transformations for Browserify v2",
   "main": "index.js",
   "scripts": {
     "test": "test/test.js"
@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "through": ">= 2.2.7",
-    "d3": "?= 3.3.11"
+    "d3": ">= 3.3.11"
   },
   "devDependencies": {
     "browserify": ">= 2.0.0"
