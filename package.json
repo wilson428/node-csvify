@@ -1,6 +1,6 @@
 {
   "name": "node-csvify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CSV and TSV transformations for Browserify v2",
   "main": "index.js",
   "scripts": {
