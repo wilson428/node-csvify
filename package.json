@@ -13,7 +13,8 @@
   "keywords": [
     "tsv",
     "csv",
-    "browserify"
+    "browserify",
+    "browserify-transform"
   ],
   "author": {
     "name" : "Chris Wilson",
