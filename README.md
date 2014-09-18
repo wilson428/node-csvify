@@ -1,6 +1,6 @@
 node-csvify
 ===========
-Version 0.0.2
+Version 0.0.2a
 
 [![Build Status](https://travis-ci.org/wilson428/node-csvify.png)](https://travis-ci.org/wilson428/node-csvify)
 
@@ -67,3 +67,6 @@ In "nojson" mode, the above example would pass a string to the application with 
 
 	first,last|Chris,Wilson|Mike,Bostock|Miles,Davis
 
+##To Do
+
+Using D3 for parsing .csv and .tsv files is overkill and bloats the dependencies. I ought to replace it with something more lightweight.
