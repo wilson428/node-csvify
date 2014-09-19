@@ -10,8 +10,8 @@ var sampleCSV = __dirname + "/states.csv";
 var sampleTSV = __dirname + "/countries.tsv";
 
 var b = browserify();
-b.require(sampleCSV);
-b.require(sampleTSV);
+b.add(sampleCSV);
+b.add(sampleTSV);
 
 b.transform(csvify);
 
