@@ -9,30 +9,31 @@ try {
 };
 
 module.exports = function(file) {
-	if (!/\.csv|\.tsv/.test(file)) {
-		return through();
-	}
-	var buffer = "";
+	return through(write, end);
 
-	return through(function(chunk) {
-    	return buffer += chunk.toString();
-  	}, function() {
+	var data = "";
+
+    function write (buffer) { data += buffer; }
+
+    function end () {
+		if (!/\.csv|\.tsv/.test(file)) {
+			return data;
+		}
+
   		var compiled;
 
 		if (/\.csv/.test(file)) {
-			var compiled = parser.csv.parse(buffer);
+			var compiled = parser.csv.parse(data);
 		} else {
-			var compiled = parser.tsv.parse(buffer);
+			var compiled = parser.tsv.parse(data);
 		}
 
-		//console.error(buffer.replace(/[\r\n]+/g, "|"));
-
 		if (options.browserify && options.browserify["transform-options"] && options.browserify["transform-options"]["node-csvify"] == "nojson") {
-			compiled = "module.exports = '" + buffer.replace(/[\r\n]+/g, "|").replace(/'/g, "\\'") + "';";
+			compiled = "module.exports = '" + data.replace(/[\r\n]+/g, "|").replace(/'/g, "\\'") + "';";
 		} else {
 			compiled = "module.exports = " + JSON.stringify(compiled, null, 2) + ";";
 		}
 		this.queue(compiled);
 		return this.queue(null);
-	});
+	}
 };
