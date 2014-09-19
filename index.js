@@ -1,4 +1,4 @@
-var d3 = require('d3');
+var parser = require('./lib/dsv');
 var through = require('through');
 var fs = require("fs");
 
@@ -20,9 +20,9 @@ module.exports = function(file) {
   		var compiled;
 
 		if (/\.csv/.test(file)) {
-			var compiled = d3.csv.parse(buffer);
+			var compiled = parser.csv.parse(buffer);
 		} else {
-			var compiled = d3.tsv.parse(buffer);
+			var compiled = parser.tsv.parse(buffer);
 		}
 
 		//console.error(buffer.replace(/[\r\n]+/g, "|"));

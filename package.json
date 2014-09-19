@@ -1,6 +1,6 @@
 {
   "name": "node-csvify",
-  "version": "0.0.2a",
+  "version": "0.0.3",
   "description": "CSV and TSV transformations for Browserify v2",
   "main": "index.js",
   "scripts": {
@@ -23,11 +23,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "through": ">= 2.2.7",
-    "d3": ">= 3.3.11"
+    "through": ">= 2.2.7"
   },
   "devDependencies": {
-    "browserify": ">= 2.0.0"
+    "browserify": ">= 5.0.0"
   },
   "bugs": {
     "url": "https://github.com/wilson428/node-csvify/issues"

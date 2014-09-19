@@ -1,6 +1,6 @@
 node-csvify
 ===========
-Version 0.0.2a
+Version 0.0.3
 
 [![Build Status](https://travis-ci.org/wilson428/node-csvify.png)](https://travis-ci.org/wilson428/node-csvify)
 
@@ -37,7 +37,7 @@ By doing so, you can include .csv or .tsv files without including the annoying `
 
 ## How it works
 
-This module uses [d3's](https://npmjs.org/package/d3) [CSV and TSV parsing functions](https://github.com/mbostock/d3/wiki/CSV) to convert the files to Javascript objects. d3 is very smart about converting headers to property names. For example, this:
+This module uses [D3's](https://npmjs.org/package/d3) [CSV and TSV parsing functions](https://github.com/mbostock/d3/wiki/CSV) to convert the files to Javascript objects. (D3 itself is not a dependency, since it requires a C++ compiler downstream. Instead, I just ripped out the dsv parsing functions and repackaged them.) These functions are very smart about converting headers to property names. For example, this:
 
 	first,last
 	Chris,Wilson
@@ -67,6 +67,5 @@ In "nojson" mode, the above example would pass a string to the application with 
 
 	first,last|Chris,Wilson|Mike,Bostock|Miles,Davis
 
-##To Do
-
-Using D3 for parsing .csv and .tsv files is overkill and bloats the dependencies. I ought to replace it with something more lightweight.
+##Version history
++ **v0.0.3**: Extracted D3's dsv parsing and removed library as a dependency
