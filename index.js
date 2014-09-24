@@ -9,17 +9,15 @@ try {
 };
 
 module.exports = function(file) {
-	return through(write, end);
+	if (!/\.csv$|\.tsv$/.test(file)) {
+		return through();
+	}
 
 	var data = "";
 
-    function write (buffer) { data += buffer; }
-
-    function end () {
-		if (!/\.csv|\.tsv/.test(file)) {
-			return data;
-		}
-
+	return through(function(chunk) {
+    	return data += chunk.toString();
+  	}, function() {
   		var compiled;
 
 		if (/\.csv/.test(file)) {
@@ -35,5 +33,5 @@ module.exports = function(file) {
 		}
 		this.queue(compiled);
 		return this.queue(null);
-	}
+	});
 };
