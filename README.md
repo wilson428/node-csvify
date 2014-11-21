@@ -1,11 +1,11 @@
 node-csvify
 ===========
-Version 0.0.3
+Version 0.0.4
 
 [![Build Status](https://travis-ci.org/wilson428/node-csvify.png)](https://travis-ci.org/wilson428/node-csvify)
 
 
-Require CSV/TSV files directly in Browserify v2
+Require CSV/TSV files directly in Browserify
 
 When bundling an app using [Browserify](http://browserify.org/), it's often convenient to be able to include your .csv (comma-delimited) or .tsv (tab-delimited) files just as you would .json files (which Node natively understands). This small script allows you to `require()` them directly.
 
