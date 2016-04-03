@@ -1,10 +1,10 @@
 node-csvify
 ===========
-Version 0.0.5
+Version 0.0.6
 
 [![Build Status](https://travis-ci.org/wilson428/node-csvify.png)](https://travis-ci.org/wilson428/node-csvify)
 [![Dependency Status](https://david-dm.org/wilson428/node-csvify.svg)](https://david-dm.org/wilson428/node-csvify)
-[![devDependencies](https://david-dm.org/${1:user}/${2:project}/dev-status.svg${3:?style=flat})](https://david-dm.org/${1:user}/${2:project}#info=devDependencies)
+[![devDependencies](https://david-dm.org/wilson428/node-csvify/dev-status.svg)](https://david-dm.org/wilson428/node-csvify#info=devDependencies)
 
 Require CSV/TSV files directly in Browserify
 
@@ -69,4 +69,5 @@ In "nojson" mode, the above example would pass a string to the application with 
 	first,last|Chris,Wilson|Mike,Bostock|Miles,Davis
 
 ##Version history
++ **v0.0.6**: Updated dependencies
 + **v0.0.3**: Extracted D3's dsv parsing and removed library as a dependency
