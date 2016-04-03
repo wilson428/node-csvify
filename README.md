@@ -1,9 +1,10 @@
 node-csvify
 ===========
-Version 0.0.4
+Version 0.0.5
 
 [![Build Status](https://travis-ci.org/wilson428/node-csvify.png)](https://travis-ci.org/wilson428/node-csvify)
-
+[![Dependency Status](https://david-dm.org/wilson428/node-csvify.svg)](https://david-dm.org/wilson428/node-csvify)
+[![devDependencies](https://david-dm.org/${1:user}/${2:project}/dev-status.svg${3:?style=flat})](https://david-dm.org/${1:user}/${2:project}#info=devDependencies)
 
 Require CSV/TSV files directly in Browserify
 

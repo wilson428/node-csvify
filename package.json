@@ -1,6 +1,6 @@
 {
   "name": "node-csvify",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CSV and TSV transformations for Browserify",
   "main": "index.js",
   "scripts": {
@@ -17,16 +17,16 @@
     "browserify-transform"
   ],
   "author": {
-    "name" : "Chris Wilson",
-    "email" : "wilson@mechanicalscribe.com",
-    "url" : "http://mechanicalscribe.com"
+    "name": "Chris Wilson",
+    "email": "wilson@mechanicalscribe.com",
+    "url": "http://mechanicalscribe.com"
   },
   "license": "MIT",
   "dependencies": {
-    "through": "2.x.x"
+    "through": "^2.3.8"
   },
   "devDependencies": {
-    "browserify": "6.0.x"
+    "browserify": "^13.0.0"
   },
   "bugs": {
     "url": "https://github.com/wilson428/node-csvify/issues"
